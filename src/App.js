@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import ImageDisplay from "./sections/ImageDisplay";
+import Content from "./sections/Content";
+
+const Main = styled.div`
+  margin: 5rem 10rem 0 10rem;
+`;
+const AppContent = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+const Title = styled.h1`
+  font-family: "Nunito", sans-serif;
+  margin-left: 20rem;
+  margin-bottom: 2rem;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main>
+      <Title>ALPACA GENERATOR</Title>
+
+      <AppContent>
+        <div>
+          <ImageDisplay />
+        </div>
+
+        <div>
+          <Content />
+        </div>
+      </AppContent>
+    </Main>
   );
 }
 
